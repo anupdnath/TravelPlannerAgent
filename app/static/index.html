@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Planner</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <main>
+        <h1>Travel Planner</h1>
+        <p class="hint">Describe your trip. The agent asks for any details that it needs.</p>
+        <form id="query-form">
+          <label for="query">Your trip</label>
+          <textarea id="query" rows="3" maxlength="2000" required
+            placeholder="Beach trip to Goa in December"></textarea>
+          <button type="submit" id="send">Send</button>
+        </form>
+        <p id="status" role="status"></p>
+        <section id="view" aria-live="polite"></section>
+      </main>
+      <aside id="graph-panel" aria-label="LangGraph steps">
+        <h2>LangGraph</h2>
+        <p id="graph-status" role="status">Idle</p>
+        <div id="graph-diagram"></div>
+        <h2>Steps</h2>
+        <ol id="graph-steps"></ol>
+      </aside>
+    </div>
+    <script src="/static/vendor/mermaid.min.js"></script>
+    <script src="/static/app.js"></script>
+    <script src="/static/graph_panel.js"></script>
+  </body>
+</html>

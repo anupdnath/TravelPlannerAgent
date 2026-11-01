@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "airbnb": {
+      "command": "node",
+      "args": [
+        "${PROJECT_ROOT}/vendor/mcp-server-airbnb/dist/index.js",
+        "--ignore-robots-txt"
+      ],
+      "env": { "AIRBNB_BASE_URL": "https://www.airbnb.co.in" }
+    },
+    "tavily": {
+      "type": "http",
+      "url": "https://mcp.tavily.com/mcp/",
+      "headers": { "Authorization": "Bearer ${tavilyApiKey}" }
+    }
+  }
+}
